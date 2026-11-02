@@ -394,6 +394,55 @@ textarea.inp{min-height:110px;resize:vertical;line-height:1.5}
 .hint{font-size:12px;color:var(--muted);margin:0;line-height:1.5}
 .mlist{display:flex;flex-direction:column;gap:8px}
 .amt-in{font-family:var(--display);font-size:30px;font-weight:var(--display-w);text-align:center;min-height:64px}
+/* home hero */
+.hero{position:relative;margin-top:-20px;margin-left:calc(-1 * max(18px,env(safe-area-inset-left,0px)));margin-right:calc(-1 * max(18px,env(safe-area-inset-right,0px)));min-height:330px;color:#FFFFFF;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg svg,.hero-bg img{width:100%;height:100%;display:block;object-fit:cover}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,.05) 60%,rgba(0,0,0,.22) 100%)}
+.hero-fade{position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(180deg,transparent,var(--bg1))}
+.hero-in{position:relative;display:flex;flex-direction:column;gap:6px;padding:16px max(18px,env(safe-area-inset-right,0px)) 74px max(18px,env(safe-area-inset-left,0px));text-shadow:0 1px 12px rgba(0,0,0,.25)}
+.hero-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:22px}
+.wordmark{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:600;font-size:38px;line-height:1;letter-spacing:-.01em}
+.wordmark sup{font-size:16px;font-style:normal;margin-left:2px}
+.tagline{display:block;font-size:11px;font-weight:500;letter-spacing:.04em;margin-top:4px;opacity:.95}
+.hero-btn{position:relative;background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.35);color:#FFFFFF;backdrop-filter:blur(8px)}
+.hero-btn i{position:absolute;top:9px;right:10px;width:9px;height:9px;border-radius:99px;background:#E5484D;border:1.5px solid #FFFFFF}
+.avatar{width:48px;height:48px;border-radius:99px;overflow:hidden;border:2px solid rgba(255,255,255,.85);background:var(--chrome);color:var(--on-chrome);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:700;flex-shrink:0;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.hero-date{font-size:14px;font-weight:500;opacity:.95}
+.hero-greet{margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:38px;font-weight:600;line-height:1.05}
+.hero-greet em{font-style:italic;font-weight:500}
+.quote{align-self:flex-start;margin-top:12px;display:flex;gap:8px;align-items:flex-start;max-width:290px;padding:12px 16px;border-radius:16px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.4);color:#FFFFFF;text-align:left;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:18px;line-height:1.25;backdrop-filter:blur(6px)}
+.quote b{font-size:28px;line-height:.8;font-style:normal}
+.qa-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:-62px;position:relative;z-index:2}
+.qa{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:78px;border-radius:18px;font-size:12px;font-weight:500;color:var(--ink);background:var(--glass-strong);border:1px solid var(--edge);box-shadow:0 8px 20px var(--shadow)}
+.qa svg{color:var(--accent)}
+.hc-card{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:var(--radius);width:100%;text-align:left;color:inherit}
+.hc-card .grow{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.hc-card b{font-size:15px;font-weight:700}
+.hc-card small{font-size:13px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.emo-circle{width:44px;height:44px;border-radius:99px;display:flex;align-items:center;justify-content:center;font-size:28px;background:var(--glass-strong);border:1px solid var(--line);flex-shrink:0}
+.chev{color:var(--muted);display:flex}
+.hc-card.deep b{color:var(--deep-ink)}
+.focus{display:flex;flex-direction:column;gap:6px;padding:14px 16px;border-radius:var(--radius)}
+.focus-in{display:flex;gap:12px;align-items:stretch}
+.focus ul{list-style:none;margin:0;padding:0;flex:1;min-width:0;display:flex;flex-direction:column}
+.fitem{display:flex;align-items:center;gap:10px;min-height:36px;width:100%;text-align:left;font-size:14px}
+.fitem span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fitem .box{width:20px;height:20px;border-radius:5px}
+.fitem.done span:last-child{color:var(--faint);text-decoration:line-through}
+.focus .mt{width:120px;flex-shrink:0;aspect-ratio:auto;min-height:96px;border-radius:14px}
+.card-h{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.card-h b{font-size:16px;font-weight:700}
+.card-h span{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.hstrip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.hstrip .mt,.hstrip .ph-add{aspect-ratio:1;border-radius:12px}
+.otd-stack{position:relative;width:86px;height:58px;flex-shrink:0}
+.otd-stack .mt{position:absolute;width:58px;height:58px;border:3px solid #FFFFFF;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.18)}
+.otd-stack .mt:first-child{left:0;top:4px;transform:rotate(-7deg)}
+.otd-stack .mt:last-child{right:0;top:0;transform:rotate(5deg)}
+.cal-ico{width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:var(--ink);flex-shrink:0}
+.bell-list{display:flex;flex-direction:column;gap:8px}
 .brand{text-align:center;display:flex;flex-direction:column;gap:6px;padding:10px 0 4px}
 .brand .h-title{font-size:46px}
 #toast{position:fixed;left:50%;bottom:calc(140px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;max-width:calc(100% - 40px);padding:10px 16px;border-radius:99px;background:var(--deep1);color:var(--deep-ink);font-size:13px;font-weight:600;box-shadow:0 8px 20px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .2s;text-align:center}
@@ -428,13 +477,15 @@ textarea.inp{min-height:110px;resize:vertical;line-height:1.5}
 <input type="file" id="photoIn" accept="image/*" class="sr" tabindex="-1" aria-hidden="true">
 <input type="file" id="attPhotoIn" accept="image/*" class="sr" tabindex="-1" aria-hidden="true">
 <input type="file" id="attVideoIn" accept="video/*" class="sr" tabindex="-1" aria-hidden="true">
+<input type="file" id="avatarIn" accept="image/*" class="sr" tabindex="-1" aria-hidden="true">
+<input type="file" id="coverIn" accept="image/*" class="sr" tabindex="-1" aria-hidden="true">
 <input type="file" id="memIn" accept="image/*,video/*" multiple class="sr" tabindex="-1" aria-hidden="true">
 
 <script>
 (function(){
 'use strict';
 var KEY = 'harian.v1', PHOTO = 'harian.photo.', OFFLINE_KEY = 'harian.offline';
-var VERSION = '0.5';
+var VERSION = '0.6';
 var SB_URL = 'https://gnfgvnzykumbsjqsdhak.supabase.co', SB_KEY = 'sb_publishable_4Dtc671MmNYyxB_aZjEnFQ_gjHWWOIG';
 var SPACES = ['Work','Family','Personal','Friends'];
 var CATS = [['Food','k1'],['Transport','k2'],['Bills','k3'],['Shopping','k4'],['Family','k5'],['Fun','k6'],['Health','k7'],['Other','k8']];
@@ -443,7 +494,7 @@ var PARTS = [['morning','Morning'],['anytime','Anytime'],['night','Night']];
 var MOODS = [['Rough','😣'],['Low','😔'],['Okay','😐'],['Good','🙂'],['Great','🥰']];
 var SKINS = [['auto','Auto','linear-gradient(90deg,#F7F1E8 50%,#16110E 50%)'],['classic','Classic','linear-gradient(135deg,#F7F1E8,#E8DCCF 60%,#8A6B52)'],['dark','Night','linear-gradient(135deg,#16110E,#3A2C24 60%,#D9B697)'],['minimal','Minimal','linear-gradient(135deg,#FFFFFF,#E4E4E4 60%,#2F2F2F)'],['nature','Nature','linear-gradient(135deg,#F2F0E6,#DCE3C8 60%,#55703F)'],['chrome','Pink chrome','linear-gradient(135deg,#FFE6F1,#E0559A 55%,#9C2363)']];
 var TABS = [['home','Home'],['journal','Journal'],['create',''],['growth','Growth'],['life','My Life']];
-var GROUP = { home: 'home', journal: 'journal', calendar: 'journal', notes: 'journal', growth: 'growth', goals: 'growth', habits: 'growth', mood: 'growth', life: 'life', memories: 'life', money: 'life', songs: 'life', health: 'life' };
+var GROUP = { home: 'home', today: 'home', journal: 'journal', calendar: 'journal', notes: 'journal', growth: 'growth', goals: 'growth', habits: 'growth', mood: 'growth', life: 'life', memories: 'life', money: 'life', songs: 'life', health: 'life' };
 var OLD = { today: 'home', personal: 'life', tracker: 'habits' };
 var WD = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 var MON = ['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -644,7 +695,13 @@ function memSrc(m){
     return '';
   }).catch(function(){ return ''; });
 }
+function idbSrc(key){
+  if (URLS['idb:' + key]) return Promise.resolve(URLS['idb:' + key]);
+  return mGet(key).then(function(b){ if (!b) return ''; URLS['idb:' + key] = URL.createObjectURL(b); return URLS['idb:' + key]; }).catch(function(){ return ''; });
+}
+function dropIdbUrl(key){ var u = URLS['idb:' + key]; if (u){ URL.revokeObjectURL(u); delete URLS['idb:' + key]; } }
 function hydrate(root){
+  (root || document).querySelectorAll('[data-idb]').forEach(function(el){ idbSrc(el.getAttribute('data-idb')).then(function(u){ if (u) el.src = u; }); });
   (root || document).querySelectorAll('[data-mem]').forEach(function(el){
     var m = find(S.memories, el.getAttribute('data-mem')); if (!m) return;
     memSrc(m).then(function(u){ if (u){ el.src = u; } else if (el.parentNode) el.parentNode.classList.add('missing'); });
@@ -734,39 +791,86 @@ function kgDiff(n){ var r = Math.round(n * 10) / 10; return (r > 0 ? '+' : '') +
 var ui = { tab: 'home', filter: 'All', calMonth: null, calSel: null, nfilter: 'All', q: '', jq: '', gtab: 'active', open: {}, th: null, sheet: null, wrapOpen: false, mMonth: null, moodMonth: null, sfilter: 'all', photoGoal: null, album: '' };
 
 /* ---------- views ---------- */
+var QUOTES = ['A new day, a new chance to bloom.', 'Small steps still move you forward.', 'Be gentle with yourself today.', 'Collect moments, not things.', 'Today is a good day to begin.', 'Breathe in calm, breathe out doubt.', 'Your story is worth writing down.', 'Little joys count too.', 'Progress, not perfection.', 'Make today feel like yours.', 'Slow mornings, soft heart.', 'Grow at your own pace.', 'Choose what makes your heart light.', 'You are doing better than you think.', 'Find the beauty in ordinary days.', 'Rest is part of the journey.', 'Let today be simple and kind.', 'Every page is a fresh start.'];
+function dayIndex(){ return Math.floor(parseYmd(today()).getTime() / 864e5); }
+function quoteNow(){ return QUOTES[((dayIndex() + (ui.qShift || 0)) % QUOTES.length + QUOTES.length) % QUOTES.length]; }
+function heroSvg(){
+  var h = new Date().getHours(), ph = h >= 5 && h < 11 ? 'morning' : h >= 11 && h < 17 ? 'day' : h >= 17 && h < 20 ? 'evening' : 'night';
+  var P = {
+    morning: { sky: ['#F4C9C2', '#F9DCCB', '#FBE9D3'], sun: '#FFF6DF', sx: 300, sy: 168, m: ['#D9B3AE', '#B8918F', '#8C6E6E'], t: '#5C4646' },
+    day: { sky: ['#9EC3E0', '#CFE2EE', '#F5E6CF'], sun: '#FFFBEA', sx: 310, sy: 70, m: ['#A5BCC6', '#86A0AA', '#5F7A80'], t: '#3F5655' },
+    evening: { sky: ['#6B5878', '#D88E7E', '#F7C590'], sun: '#FFE9C6', sx: 300, sy: 182, m: ['#9A6C78', '#6E4A58', '#43303A'], t: '#2A1D24' },
+    night: { sky: ['#11162E', '#262448', '#4A3552'], sun: '#F6ECD6', sx: 310, sy: 70, m: ['#3B3454', '#2A2541', '#1B1830'], t: '#110F1D' }
+  }[ph];
+  var stars = ph === 'night' ? [[40,40],[90,90],[150,30],[200,70],[250,25],[60,130],[360,120],[120,150],[230,120],[380,40]].map(function(p, i){ return '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="' + (i % 3 ? 1 : 1.6) + '" fill="#FFFFFF" opacity="' + (i % 2 ? .55 : .85) + '"/>'; }).join('') : '';
+  var sun = ph === 'night'
+    ? '<circle cx="' + P.sx + '" cy="' + P.sy + '" r="40" fill="' + P.sun + '" opacity=".12"/><circle cx="' + P.sx + '" cy="' + P.sy + '" r="16" fill="' + P.sun + '"/><circle cx="' + (P.sx + 7) + '" cy="' + (P.sy - 5) + '" r="14" fill="' + P.sky[0] + '"/>'
+    : '<circle cx="' + P.sx + '" cy="' + P.sy + '" r="70" fill="' + P.sun + '" opacity=".28"/><circle cx="' + P.sx + '" cy="' + P.sy + '" r="34" fill="' + P.sun + '" opacity=".45"/><circle cx="' + P.sx + '" cy="' + P.sy + '" r="15" fill="' + P.sun + '"/>';
+  var trees = [[318,236,16],[338,226,20],[360,232,17],[382,222,22],[300,244,12],[396,238,14]].map(function(c){ return '<circle cx="' + c[0] + '" cy="' + c[1] + '" r="' + c[2] + '" fill="' + P.t + '"/>'; }).join('') +
+    '<path d="M24 250 l9 -34 l9 34z M40 252 l7 -24 l7 24z" fill="' + P.t + '" opacity=".9"/>';
+  return '<svg viewBox="0 0 400 330" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="hsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + P.sky[0] + '"/><stop offset=".55" stop-color="' + P.sky[1] + '"/><stop offset=".8" stop-color="' + P.sky[2] + '"/></linearGradient></defs>' +
+    '<rect width="400" height="330" fill="url(#hsky)"/>' + stars + sun +
+    '<path d="M0 205 L55 176 L110 190 L180 152 L250 182 L320 158 L400 180 L400 330 L0 330Z" fill="' + P.m[0] + '" opacity=".85"/>' +
+    '<path d="M0 232 L70 204 L140 222 L220 192 L290 216 L360 198 L400 210 L400 330 L0 330Z" fill="' + P.m[1] + '" opacity=".92"/>' +
+    '<path d="M0 262 Q100 228 200 252 T400 240 L400 330 L0 330Z" fill="' + P.m[2] + '"/>' + trees + '</svg>';
+}
+function onThisDay(){
+  var t = today(), md = t.slice(5), hits = [];
+  liveEntries().forEach(function(e){ if (e.date.slice(5) === md && e.date < t) hits.push({ date: e.date, kind: 'entry', e: e }); });
+  liveMems().forEach(function(m){ if (m.date.slice(5) === md && m.date < t) hits.push({ date: m.date, kind: 'mem', m: m }); });
+  if (hits.length){ hits.sort(function(a, b){ return a.date < b.date ? 1 : -1; }); var y = +t.slice(0, 4) - +hits[0].date.slice(0, 4); return { title: 'On This Day', date: hits[0].date, sub: fmtShort(hits[0].date) + ' ' + hits[0].date.slice(0, 4) + ' · ' + y + (y === 1 ? ' year ago' : ' years ago'), mems: memsOn(hits[0].date).slice(0, 2) }; }
+  var old = liveMems().filter(function(m){ return diffDays(m.date, t) >= 7; });
+  if (!old.length) return null;
+  var pick = old[dayIndex() % old.length];
+  return { title: 'A memory for you', date: pick.date, sub: fmtFull(pick.date), mems: [pick].concat(memsOn(pick.date).filter(function(x){ return x.id !== pick.id; }).slice(0, 1)) };
+}
+function bellCount(){ var t = today(), now = nowHM(); return itemsOn(t).filter(function(i){ return i.time && !isDone(i, t) && i.time < now; }).length; }
 function vHome(){
   var t = today(), h = new Date().getHours();
-  var greet = h < 12 ? 'Good morning,' : h < 18 ? 'Good afternoon,' : 'Good evening,';
-  var all = itemsOn(t), list = itemsOn(t, ui.filter), e = entryOn(t);
+  var greet = h < 5 ? 'Good night,' : h < 12 ? 'Good morning,' : h < 17 ? 'Good afternoon,' : 'Good evening,';
+  var e = entryOn(t), mv = e && e.mood || 0, d = parseYmd(t), name = S.name || 'there';
+  var all = itemsOn(t), done = all.filter(function(x){ return isDone(x, t); }).length;
+  var focus = all.slice().sort(function(a, b){ return isDone(a, t) - isDone(b, t); }).slice(0, 4);
+  var todays = memsOn(t), recent = todays.length ? todays : liveMems().slice(0, 4), photo = todays.filter(function(m){ return m.kind === 'image'; })[0] || liveMems().filter(function(m){ return m.kind === 'image'; })[0];
+  var qa = function(a, icon, label, extra){ return '<button class="qa" data-a="' + a + '"' + (extra || '') + '>' + ico(icon, 26) + label + '</button>'; };
+  var out = '<section class="hero" aria-label="Welcome"><div class="hero-bg">' + (S.settings.cover ? '<img data-idb="cover" alt="">' : heroSvg()) + '</div><div class="hero-shade"></div><div class="hero-fade"></div><div class="hero-in">' +
+    '<div class="hero-top"><div><span class="wordmark">Dayelle<sup>✦</sup></span><span class="tagline">Your Personal Life Journal</span></div><div class="head-r">' +
+    '<button class="icon-btn hero-btn" data-a="bell" aria-label="Today\'s reminders' + (bellCount() ? ', ' + bellCount() + ' overdue' : '') + '">' + ico('<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/>', 22) + (bellCount() ? '<i></i>' : '') + '</button>' +
+    '<button class="avatar" data-a="settings" aria-label="Profile and settings">' + (S.settings.avatar ? '<img data-idb="avatar" alt="">' : esc(name.charAt(0).toUpperCase())) + '</button></div></div>' +
+    '<span class="hero-date">' + WD[d.getDay()].slice(0, 3) + ', ' + pad(d.getDate()) + ' ' + MON[d.getMonth()].slice(0, 3) + ' ' + d.getFullYear() + '</span>' +
+    '<h1 class="hero-greet">' + greet + '<br><em>' + esc(name) + '</em> ♡</h1>' +
+    '<button class="quote" data-a="quote" aria-label="Show another thought"><b aria-hidden="true">“</b><span>' + esc(quoteNow()) + '</span></button>' +
+    '</div></section>';
+  out += '<nav class="qa-row" aria-label="Quick actions">' + qa('entry', I.journal, 'Journal', ' data-d="' + t + '"') + qa('mem-add', I.image, 'Memory', ' data-d="' + t + '"') + qa('moodq', I.mood, 'Mood') + qa('activity', '<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12l3 3 5-6"/>', 'Activity') + qa('create', '<rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/>', 'More') + '</nav>';
+  out += '<button class="hc-card glass" data-a="moodq"><span class="emo-circle" aria-hidden="true">' + (mv ? moodEmo(mv) : '🙂') + '</span><span class="grow"><b>Today\'s Mood</b><small>' + (mv ? MOODS[mv - 1][0] + (e.moodNote ? ' · ' + esc(e.moodNote) : '') : 'How are you feeling?') + '</small></span><span class="chev">' + CHEV_R + '</span></button>';
+  if (isEvening() || ui.wrapOpen) out += '<button class="hc-card deep" data-a="activity" data-wrap="1" style="flex-direction:row"><span class="emo-circle" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25)" aria-hidden="true">🌙</span><span class="grow"><b>Evening wrap</b><small style="color:var(--deep-muted)">See how today went and plan tomorrow</small></span><span class="chev" style="color:var(--deep-muted)">' + CHEV_R + '</span></button>';
+  out += '<section class="focus glass" aria-label="Today\'s focus"><div class="card-h"><b>Today\'s Focus</b><span>' + (all.length ? done + '/' + all.length : '') + '</span></div><div class="focus-in"><ul>' +
+    (focus.length ? focus.map(function(it){ var dn = isDone(it, t); return '<li><button class="fitem' + (dn ? ' done' : '') + '" data-a="toggle" data-id="' + it.id + '" data-d="' + t + '" aria-pressed="' + dn + '"><span class="box' + (dn ? ' on' : '') + '">' + (dn ? CHECK : '') + '</span><span>' + esc(it.title) + '</span></button></li>'; }).join('') : '<li class="hint" style="padding:6px 0">Nothing planned yet.</li>') +
+    '<li><button class="link" data-a="activity">' + (all.length > 4 ? 'See all ' + all.length : all.length ? 'Open today' : '+ Add a plan') + '</button></li></ul>' +
+    (photo ? memThumb(photo) : '') + '</div></section>';
+  out += '<section class="focus glass" aria-label="Today\'s highlight"><div class="card-h"><b>' + (todays.length ? 'Today\'s Highlight' : 'Recent moments') + '</b><button class="icon-btn" style="width:36px;height:36px;border:none;background:none" data-a="mem-add" data-d="' + t + '" aria-label="Add a photo or video">' + PLUS + '</button></div>' +
+    (recent.length ? '<div class="hstrip">' + recent.slice(0, 4).map(function(m){ return memThumb(m); }).join('') + '</div>' : '<div class="hstrip"><button class="ph-add" data-a="mem-add" data-d="' + t + '">' + ico(I.camera, 20) + 'Add</button><span class="ph-add" aria-hidden="true"></span><span class="ph-add" aria-hidden="true"></span><span class="ph-add" aria-hidden="true"></span></div>') +
+    (e && e.highlight ? '<span class="hl">' + esc(e.highlight) + '</span>' : '') + '</section>';
+  var otd = onThisDay();
+  if (otd) out += '<button class="hc-card glass" data-a="calsel" data-d="' + otd.date + '"><span class="cal-ico">' + ico(I.plan, 30) + '</span><span class="grow"><b>' + otd.title + '</b><small>' + otd.sub + '</small></span>' + (otd.mems.length ? '<span class="otd-stack">' + otd.mems.map(function(m){ return memThumb(m).replace('<button', '<span').replace(/<\/button>$/, '</span>'); }).join('') + '</span>' : '') + '<span class="chev">' + CHEV_R + '</span></button>';
+  return out;
+}
+function vToday(){
+  var t = today(), all = itemsOn(t), list = itemsOn(t, ui.filter);
   var start = addDays(t, -parseYmd(t).getDay()), week = '';
   for (var i = 0; i < 7; i++){
-    var d = addDays(start, i), has = itemsOn(d).length > 0 || !entryEmpty(entryOn(d));
-    week += '<button class="wd' + (d === t ? ' is-today' : '') + '" data-a="goday" data-d="' + d + '" aria-label="' + fmtLong(d) + (has ? ', has plans or a journal page' : '') + '"><span class="wd-l">' + 'SMTWTFS'[i] + '</span><span class="wd-n">' + parseYmd(d).getDate() + '</span><span class="wd-dot' + (has ? ' on' : '') + '"></span></button>';
+    var d = addDays(start, i), has = itemsOn(d).length > 0;
+    week += '<button class="wd' + (d === t ? ' is-today' : '') + '" data-a="goday" data-d="' + d + '" aria-label="' + fmtLong(d) + (has ? ', has plans' : '') + '"><span class="wd-l">' + 'SMTWTFS'[i] + '</span><span class="wd-n">' + parseYmd(d).getDate() + '</span><span class="wd-dot' + (has ? ' on' : '') + '"></span></button>';
   }
-  var out = '<header class="head">' + headDecor() + '<div><div class="eyebrow">' + fmtFull(t) + '</div><h1 class="h-greet">' + greet + '<br><span class="h-title">' + esc(S.name || 'there') + '</span></h1></div>' +
-    '<div class="head-r">' + syncDot() + '<button class="icon-btn" data-a="settings" aria-label="Settings">' + GEAR + '</button></div></header>';
-
-  var mv = e && e.mood || 0;
-  out += '<section class="deep" aria-label="Today"><div class="deep-row"><span class="label">How are you today?</span>' + (mv ? '<span class="sub">' + MOODS[mv - 1][0] + '</span>' : '') + '</div><div class="moods">' + moodButtons(mv, false) + '</div>' +
-    (e && e.highlight ? '<span class="sub">Best moment</span><span class="deep-title" style="font-style:italic">“' + esc(e.highlight) + '”</span>' : '') +
-    '<div class="deep-row"><span class="sub">' + (entryEmpty(e) ? 'Today\'s page is still empty.' : esc((e.title || plain(e.body)).slice(0, 70)) + (plain(e.body).length > 70 ? '…' : '')) + '</span><button class="btn-light" data-a="entry" data-d="' + t + '">' + (entryEmpty(e) ? 'Write today\'s page' : 'Open page') + '</button></div></section>';
-
-  out += '<nav class="week glass" aria-label="This week">' + week + '</nav>';
+  var out = head(fmtFull(t), 'Today', '', ['home', 'Home']) + '<nav class="week glass" aria-label="This week">' + week + '</nav>';
   if (isEvening() || ui.wrapOpen) out += wrapCard(t);
-
   if (S.settings.period){
     var pi = periodInfo();
     if (pi.starts.length){ var n = diffDays(t, pi.next); if (pi.set[t] || (n >= 0 && n <= 3)) out += '<a class="row glass" href="#calendar"><span class="dot" style="--c:var(--period);width:10px;height:10px"></span><span class="row-main" style="min-height:36px"><span style="font-size:13px;font-weight:600">' + esc(periodLine(pi, t)) + '</span></span></a>'; }
   }
-
   var rows = list.length ? list.map(function(it){ return itemRow(it, t, true); }).join('') : '<div class="empty glass">' + (all.length ? 'Nothing in this space today.' : 'Nothing planned for today yet. Type below to add one.') + '</div>';
-  out += '<section class="sec" aria-label="Today\'s plan"><div class="sec-h"><span class="label">Today\'s plan · ' + all.filter(function(x){ return isDone(x, t); }).length + '/' + all.length + '</span><button class="link" data-a="new-item" data-d="' + t + '">+ Add</button></div>' + chips('filter', ui.filter) + '<div class="list">' + rows + '</div></section>';
-
+  out += '<section class="sec" aria-label="Plans"><div class="sec-h"><span class="label">Plans · ' + all.filter(function(x){ return isDone(x, t); }).length + '/' + all.length + '</span><button class="link" data-a="new-item" data-d="' + t + '">+ Add</button></div>' + chips('filter', ui.filter) + '<div class="list">' + rows + '</div></section>';
   out += routineSection(t);
-
-  var mems = liveMems().slice(0, 10);
-  out += '<section class="sec" aria-label="Memories"><div class="sec-h"><span class="label">Memories</span><a class="link" href="#memories">See all</a></div><div class="mstrip"><button class="ph-add" data-a="mem-add" data-d="' + t + '">' + ico(I.camera, 20) + 'Add</button>' + mems.map(function(m){ return memThumb(m); }).join('') + '</div></section>';
-
   if (S.habits.length){
     out += '<section class="sec" aria-label="Habits"><div class="sec-h"><span class="label">Habits</span><a class="link" href="#habits">Tracker</a></div><div class="habits">' + S.habits.map(function(x){
       var c = hCount(x, t), met = c >= (x.target || 1);
@@ -1099,7 +1203,7 @@ function vHealth(){
 }
 
 /* ---------- render ---------- */
-var views = { home: vHome, journal: vJournal, calendar: vCalendar, notes: vNotes, growth: vGrowth, goals: vGoals, habits: vHabits, mood: vMood, life: vLife, memories: vMemories, money: vMoney, songs: vSongs, health: vHealth };
+var views = { home: vHome, today: vToday, journal: vJournal, calendar: vCalendar, notes: vNotes, growth: vGrowth, goals: vGoals, habits: vHabits, mood: vMood, life: vLife, memories: vMemories, money: vMoney, songs: vSongs, health: vHealth };
 function applyTheme(){
   var sk = S && S.settings ? S.settings.skin : 'auto', root = document.documentElement;
   if (!sk || sk === 'auto'){ root.removeAttribute('data-skin'); root.removeAttribute('data-theme'); return; }
@@ -1115,7 +1219,7 @@ function render(){
   scr.innerHTML = views[ui.tab]();
   scr.scrollTop = top;
   hydrate(scr);
-  var dockOn = ui.tab === 'home' || ui.tab === 'calendar', dock = document.getElementById('dock');
+  var dockOn = ui.tab === 'today' || ui.tab === 'calendar', dock = document.getElementById('dock');
   dock.innerHTML = dockOn ? '<form id="cap" class="capture" autocomplete="off"><label class="sr" for="capIn">Quick add a plan</label><input id="capIn" enterkeyhint="done" placeholder="' + (ui.tab === 'calendar' ? 'Add a plan to ' + relDay(ui.calSel || today()) + '…' : 'Call Mom tomorrow 3pm #family') + '"><button class="fab" type="submit" aria-label="Add">' + PLUS + '</button></form>' : '';
   dock.hidden = !dockOn;
 }
@@ -1290,6 +1394,13 @@ var SHEETS = {
     return sheetFrame(w ? 'Edit weight' : 'Log weight', '<div class="field"><label for="f_kg">Weight (kg)</label><input class="inp amt-in" id="f_kg" inputmode="decimal" placeholder="' + (lw ? lw.kg.toFixed(1) : '55.0') + '" value="' + (w ? w.kg.toFixed(1) : '') + '"></div>' +
       '<div class="field"><label for="f_date">Date</label><input class="inp" type="date" id="f_date" value="' + (w ? w.date : today()) + '"></div>' + saveRow('save-weight', 'weight', w));
   },
+  bell: function(){
+    var t = today(), now = nowHM(), all = itemsOn(t), over = all.filter(function(i){ return i.time && !isDone(i, t) && i.time < now; }), next = all.filter(function(i){ return !isDone(i, t) && (!i.time || i.time >= now); });
+    var rows = function(list, od){ return list.map(function(it){ return '<button class="row glass" data-a="edit-item" data-id="' + it.id + '"><span class="row-main" style="min-height:36px"><span class="row-title" style="font-size:14px">' + esc(it.title) + '</span><span class="row-meta">' + fmtTime(it.time) + (od ? ' <span class="pill">Overdue</span>' : '') + '</span></span></button>'; }).join(''); };
+    var left = PARTS.map(function(p){ var rs = S.routines.filter(function(r){ return (r.part || 'anytime') === p[0]; }), l = rs.filter(function(r){ return !rDone(r, t); }).length; return rs.length && l ? p[1] + ' routine: ' + l + ' left' : ''; }).filter(Boolean);
+    return sheetFrame('Today', '<div class="bell-list">' + (over.length ? '<span class="label">Overdue</span>' + rows(over, true) : '') + (next.length ? '<span class="label">Coming up</span>' + rows(next) : '') + (left.length ? '<span class="label">Self-care</span>' + left.map(function(x){ return '<p class="hint">' + x + '</p>'; }).join('') : '') +
+      (!over.length && !next.length && !left.length ? '<div class="empty glass">All clear for today.</div>' : '') + '</div><div class="actions"><button class="btn btn-ghost" data-a="activity">Open today</button><button class="btn btn-ghost" data-a="settings">Reminder settings</button></div>');
+  },
   settings: function(){
     var st = S.settings, hours = [], nf = st.notif || {};
     for (var hh = 17; hh <= 23; hh++) hours.push('<option value="' + hh + '"' + ((st.wrapHour || 20) === hh ? ' selected' : '') + '>' + fmtHour(hh) + '</option>');
@@ -1300,6 +1411,8 @@ var SHEETS = {
     return sheetFrame('Settings',
       acct +
       '<div class="field"><label for="f_name">Your name</label><input class="inp" id="f_name" maxlength="30" value="' + esc(S.name) + '"></div>' +
+      '<div class="field"><span class="label">Profile photo</span><div class="actions" style="justify-content:flex-start;align-items:center"><span class="avatar" style="border-color:var(--line)">' + (st.avatar ? '<img data-idb="avatar" alt="">' : esc((S.name || '?').charAt(0).toUpperCase())) + '</span><button class="btn btn-ghost" data-a="pick-avatar">' + (st.avatar ? 'Change' : 'Add photo') + '</button>' + (st.avatar ? '<button class="link" data-a="rm-avatar">Remove</button>' : '') + '</div></div>' +
+      '<div class="field"><span class="label">Home cover</span><p class="hint">' + (st.cover ? 'Using your own photo.' : 'A sky that changes with the time of day.') + '</p><div class="actions" style="justify-content:flex-start"><button class="btn btn-ghost" data-a="pick-cover">' + (st.cover ? 'Change photo' : 'Use my photo') + '</button>' + (st.cover ? '<button class="link" data-a="rm-cover">Back to the sky</button>' : '') + '</div></div>' +
       '<fieldset class="field"><legend>Theme</legend><div class="skins">' + SKINS.map(function(k){ return '<label class="skin"><input type="radio" name="skin" value="' + k[0] + '"' + ((st.skin || 'auto') === k[0] ? ' checked' : '') + '><span><i style="background:' + k[2] + '"></i>' + k[1] + '</span></label>'; }).join('') + '</div></fieldset>' +
       '<div class="field"><label for="f_wrap">Evening wrap starts at</label><select class="inp" id="f_wrap">' + hours.join('') + '</select></div>' +
       '<label class="tick"><input type="checkbox" id="f_period"' + (st.period ? ' checked' : '') + '> Show period tracker in Calendar</label>' +
@@ -1515,6 +1628,13 @@ function readEntryForm(){
 }
 var A = {
   create: function(){ openSheet({ kind: 'create' }); },
+  activity: function(d){ if (d && d.wrap) ui.wrapOpen = true; if (ui.sheet) closeSheet(); if (ui.tab === 'today') render(); else location.hash = 'today'; },
+  bell: function(){ openSheet({ kind: 'bell' }); },
+  quote: function(){ ui.qShift = (ui.qShift || 0) + 1; var q = document.querySelector('.quote span'); if (q) q.textContent = quoteNow(); },
+  'pick-avatar': function(){ var i = document.getElementById('avatarIn'); i.value = ''; i.click(); },
+  'pick-cover': function(){ var i = document.getElementById('coverIn'); i.value = ''; i.click(); },
+  'rm-avatar': function(){ mDel('avatar'); dropIdbUrl('avatar'); S.settings.avatar = false; save(); renderSheet(); render(); },
+  'rm-cover': function(){ mDel('cover'); dropIdbUrl('cover'); S.settings.cover = false; save(); renderSheet(); render(); },
   filter: function(d){ ui.filter = d.v; render(); },
   nfilter: function(d){ ui.nfilter = d.v; render(); },
   sfilter: function(d){ ui.sfilter = d.v; render(); },
@@ -1752,6 +1872,14 @@ document.addEventListener('input', function(e){
 });
 document.addEventListener('change', function(e){
   var t = e.target;
+  if (t.id === 'avatarIn' || t.id === 'coverIn'){
+    var pf = t.files && t.files[0], key = t.id === 'avatarIn' ? 'avatar' : 'cover'; if (!pf) return;
+    compressBlob(pf, key === 'avatar' ? 400 : 1400, function(blob){
+      if (!blob){ toast('That photo could not be read. Try another one.'); return; }
+      mPut(key, blob).then(function(){ dropIdbUrl(key); S.settings[key] = true; save(); if (ui.sheet && ui.sheet.kind === 'settings') renderSheet(); render(); toast(key === 'avatar' ? 'Profile photo updated' : 'Home cover updated'); }, function(){ toast('Not enough space on this phone.'); });
+    });
+    return;
+  }
   if (t.id === 'memIn'){ if (!ui.sheet || ui.sheet.kind !== 'memAdd') return; var s = ui.sheet; s.date = val('f_mdate'); s.album = val('f_album'); s.caption = val('f_cap'); cleanupSheet(); s.previews = []; s.files = Array.prototype.slice.call(t.files || []); s.d = s.date || s.d; renderSheet(); return; }
   if (t.id === 'attPhotoIn' || t.id === 'attVideoIn'){
     var mf = t.files && t.files[0], isVid = t.id === 'attVideoIn';
