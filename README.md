@@ -1,4 +1,4 @@
-# Harian
+# Dayelle
 
 Personal day planner: routine, plans, calendar, notes, bucket list, money, songs, habits and health.
 Data stays on each person's own phone.

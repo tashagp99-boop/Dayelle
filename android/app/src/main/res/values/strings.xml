@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Harian</string>
-    <string name="title_activity_main">Harian</string>
+    <string name="app_name">Dayelle</string>
+    <string name="title_activity_main">Dayelle</string>
     <string name="package_name">my.harian.app</string>
     <string name="custom_url_scheme">my.harian.app</string>
 </resources>

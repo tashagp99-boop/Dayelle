@@ -1,6 +1,6 @@
 {
   "appId": "my.harian.app",
-  "appName": "Harian",
+  "appName": "Dayelle",
   "webDir": "www",
   "android": { "backgroundColor": "#FBEAF2" },
   "plugins": {

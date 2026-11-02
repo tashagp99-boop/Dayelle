@@ -1,4 +1,4 @@
-name: Build Harian APK
+name: Build Dayelle APK
 
 on:
   push:
@@ -44,19 +44,19 @@ jobs:
           ./gradlew assembleDebug --no-daemon
 
       - name: Rename APK
-        run: cp android/app/build/outputs/apk/debug/app-debug.apk Harian-0.4.${{ github.run_number }}.apk
+        run: cp android/app/build/outputs/apk/debug/app-debug.apk Dayelle-0.4.${{ github.run_number }}.apk
 
       - name: Keep a copy on this run
         uses: actions/upload-artifact@v4
         with:
-          name: Harian-APK
-          path: Harian-*.apk
+          name: Dayelle-APK
+          path: Dayelle-*.apk
 
       - name: Publish as the "latest" download
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh release delete latest --yes --cleanup-tag || true
-          gh release create latest Harian-*.apk \
-            --title "Harian 0.4.${{ github.run_number }}" \
+          gh release create latest Dayelle-*.apk \
+            --title "Dayelle 0.4.${{ github.run_number }}" \
             --notes "Download the .apk below on your Android phone and open it to install or update. Your data stays on the phone."

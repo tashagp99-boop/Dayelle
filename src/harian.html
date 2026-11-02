@@ -1,4 +1,4 @@
-<title>Harian</title>
+<title>Dayelle</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Silkscreen&display=swap">
 <style>
@@ -401,7 +401,7 @@ function reschedule(){
       var its = itemsOn(d), open = its.filter(function(i){ return !isDone(i, d); });
       if (n.brief){
         var first = open.filter(function(i){ return i.time; })[0];
-        add(atHM(d, n.brief), 'Good morning' + (S.name ? ', ' + S.name : '') + ' ✦', its.length ? its.length + (its.length === 1 ? ' plan' : ' plans') + ' today' + (first ? '. First: ' + first.title + ' at ' + fmtTime(first.time) : '') + '.' : 'No plans yet today. Open Harian to set your day.');
+        add(atHM(d, n.brief), 'Good morning' + (S.name ? ', ' + S.name : '') + ' ✦', its.length ? its.length + (its.length === 1 ? ' plan' : ' plans') + ' today' + (first ? '. First: ' + first.title + ' at ' + fmtTime(first.time) : '') + '.' : 'No plans yet today. Open Dayelle to set your day.');
       }
       [['morning', n.morning, 'Morning routine'], ['night', n.night, 'Night routine']].forEach(function(p){
         if (!p[1]) return;
@@ -427,7 +427,7 @@ function nativeInit(){
 /* ---------- state ---------- */
 var S = null, storageOK = true;
 function load(){ try { var r = localStorage.getItem(KEY); return r ? JSON.parse(r) : null; } catch (e) { storageOK = false; return null; } }
-function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); scheduleSoon(); return true; } catch (e) { if (e && /quota/i.test(e.name + e.message)) { toast('Phone storage for Harian is full. Delete some photos first.'); return false; } storageOK = false; renderBanner(); return false; } }
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); scheduleSoon(); return true; } catch (e) { if (e && /quota/i.test(e.name + e.message)) { toast('Phone storage for Dayelle is full. Delete some photos first.'); return false; } storageOK = false; renderBanner(); return false; } }
 function uid(){ return Math.random().toString(36).slice(2, 9) + Date.now().toString(36).slice(-3); }
 function blank(name){ return { v: 2, name: name || '', created: today(), settings: { theme: 'auto', wrapHour: 20, period: false, notif: { on: true, brief: '04:30', morning: '05:00', night: '21:30', song: '20:30', plans: true } }, items: [], habits: [], habitLog: {}, notes: [], journal: {}, goals: [], routines: [], routineLog: {}, expenses: [], songs: [], period: { days: [] }, health: { height: 0, weights: [] } }; }
 function normalize(o){
@@ -962,7 +962,7 @@ function renderSheet(){
   if (!s){ host.innerHTML = ''; return; }
   var html = '';
   if (s.kind === 'welcome'){
-    html = sheetFrame('Welcome to Harian', '<p class="hint">One place for your day: routine, plans, goals, money, songs and notes. Everything you add is saved on this device only.</p>' +
+    html = sheetFrame('Welcome to Dayelle', '<p class="hint">One place for your day: routine, plans, goals, money, songs and notes. Everything you add is saved on this device only.</p>' +
       '<div class="field"><label for="f_name">What should we call you?</label><input class="inp" id="f_name" maxlength="30" placeholder="Your name" autocomplete="given-name"></div>' +
       '<label class="tick"><input type="checkbox" id="f_ex" checked> Add a few examples to explore (you can delete them)</label>' +
       '<p class="err" id="f_err"></p><button class="btn btn-chrome" data-a="start">Start</button>', false);
@@ -1056,7 +1056,7 @@ function renderSheet(){
       '<fieldset class="field"><legend>Appearance</legend>' + radios('theme', [['auto', 'Auto'], ['light', 'Day'], ['dark', 'Night']], st.theme || 'auto') + '</fieldset>' +
       '<div class="field"><label for="f_wrap">Evening wrap starts at</label><select class="inp" id="f_wrap">' + hours.join('') + '</select></div>' +
       '<label class="tick"><input type="checkbox" id="f_period"' + (st.period ? ' checked' : '') + '> Show period tracker in Calendar</label>' +
-      '<div class="field"><span class="label">Reminders</span><p class="hint">' + (NATIVE ? 'Routine reminders repeat every 30 minutes, up to 3 times, and stop as soon as you tick everything off.' : 'Reminders work in the Harian Android app. You can set the times here already.') + '</p></div>' +
+      '<div class="field"><span class="label">Reminders</span><p class="hint">' + (NATIVE ? 'Routine reminders repeat every 30 minutes, up to 3 times, and stop as soon as you tick everything off.' : 'Reminders work in the Dayelle Android app. You can set the times here already.') + '</p></div>' +
       '<label class="tick"><input type="checkbox" id="n_on"' + (nf.on !== false ? ' checked' : '') + '> Send reminders</label>' +
       '<div class="two"><div class="field"><label for="n_brief">Morning briefing</label><input class="inp" type="time" id="n_brief" value="' + (nf.brief || '') + '"></div><div class="field"><label for="n_song">Song practice</label><input class="inp" type="time" id="n_song" value="' + (nf.song || '') + '"></div></div>' +
       '<div class="two"><div class="field"><label for="n_morning">Morning routine</label><input class="inp" type="time" id="n_morning" value="' + (nf.morning || '') + '"></div><div class="field"><label for="n_night">Night routine</label><input class="inp" type="time" id="n_night" value="' + (nf.night || '') + '"></div></div>' +
@@ -1069,7 +1069,7 @@ function renderSheet(){
       '<div id="exportBox"></div>' +
       '<div class="field"><span class="label">Start over</span><p class="hint">Removes everything on this device, photos included.</p></div>' +
       '<div class="actions" style="justify-content:flex-start"><button class="btn btn-danger" data-a="reset">Erase all data</button></div>' +
-      '<p class="hint">Harian · test version ' + VERSION + '</p>');
+      '<p class="hint">Dayelle · test version ' + VERSION + '</p>');
   }
   host.innerHTML = html;
   if (s.kind === 'media'){
@@ -1199,7 +1199,7 @@ var A = {
     upsert(S.health.weights, ui.sheet.id, { kg: Math.round(k * 10) / 10, date: val('f_date') || today() });
     save(); closeSheet(); render(); toast('Logged · BMI ' + bmiOf(k).toFixed(1));
   },
-  'test-notif': function(){ if (!LN) return; LN.schedule({ notifications: [{ id: 9999, title: 'Harian ✦', body: 'Reminders are working.', schedule: { at: new Date(Date.now() + 3000), allowWhileIdle: true } }] }).then(function(){ toast('Test sent. It arrives in a few seconds.'); }, function(){ toast('Allow notifications for Harian in your phone settings.'); }); },
+  'test-notif': function(){ if (!LN) return; LN.schedule({ notifications: [{ id: 9999, title: 'Dayelle ✦', body: 'Reminders are working.', schedule: { at: new Date(Date.now() + 3000), allowWhileIdle: true } }] }).then(function(){ toast('Test sent. It arrives in a few seconds.'); }, function(){ toast('Allow notifications for Dayelle in your phone settings.'); }); },
   'exact-notif': function(){ if (!LN) return; LN.changeExactNotificationSetting().catch(function(){ toast('Not needed on this phone.'); }); },
   habits: function(){ openSheet({ kind: 'habits' }); },
   journal: function(){ openSheet({ kind: 'journal' }); },
@@ -1295,7 +1295,7 @@ var A = {
   export: function(){
     var photos = {};
     S.goals.forEach(function(g){ g.photos.forEach(function(p){ var x = getPhoto(p.id); if (x) photos[p.id] = x; }); });
-    var data = JSON.stringify(Object.assign({}, S, { photos: photos })), name = 'harian-backup-' + today() + '.json';
+    var data = JSON.stringify(Object.assign({}, S, { photos: photos })), name = 'dayelle-backup-' + today() + '.json';
     var box = document.getElementById('exportBox');
     function fallback(){
       box.innerHTML = '<div class="field"><label for="f_dump">Copy this text and keep it somewhere safe (for example a note or an email to yourself).</label><textarea class="inp" id="f_dump" readonly>' + esc(data) + '</textarea><button class="btn btn-ghost" data-a="copy">Copy backup text</button></div>';
@@ -1353,7 +1353,7 @@ document.addEventListener('change', function(e){
     compress(file, function(data){
       if (!data){ toast('That photo could not be read. Try another one.'); return; }
       var id = uid();
-      if (!setPhoto(id, data)){ toast('Phone storage for Harian is full. Delete an older photo first.'); return; }
+      if (!setPhoto(id, data)){ toast('Phone storage for Dayelle is full. Delete an older photo first.'); return; }
       g.photos.push({ id: id, date: today(), caption: '' });
       if (!save()){ g.photos.pop(); delPhoto(id); return; }
       ui.open[g.id] = true; render(); toast('Progress photo added ✦');
@@ -1369,7 +1369,7 @@ document.addEventListener('change', function(e){
       var ph = o.photos || {}; delete o.photos;
       Object.keys(ph).forEach(function(k){ setPhoto(k, ph[k]); });
       S = normalize(o); save(); closeSheet(); render(); toast('Backup restored');
-    } catch (x) { toast('That file is not a Harian backup'); }
+    } catch (x) { toast('That file is not a Dayelle backup'); }
   };
   r.readAsText(file2);
 });
