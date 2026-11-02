@@ -1,31 +1,27 @@
 # Dayelle
 
-Personal day planner: routine, plans, calendar, notes, bucket list, money, songs, habits and health.
-Data stays on each person's own phone.
+*Your personal life journal.* Not just a diary, a beautiful archive of your life.
+
+Journal pages with mood, best moment and gratitude; photo and video memories; plans, calendar and reminders;
+self-care routine, habits, bucket list, spending, songs, health and cycle tracking.
 
 ## How this project fits together
 
 | Part | What it is |
 |---|---|
-| `src/harian.html` | The whole app: one HTML page with its CSS and JavaScript. The same file runs on the web. |
-| `scripts/build-web.js` | Wraps that page into `www/index.html` and adds Capacitor's runtime. |
+| `src/harian.html` | The whole app: one HTML page with its CSS and JavaScript. The same file runs as the web preview. |
+| `scripts/build-web.js` | Wraps that page into `www/index.html`, adds Capacitor and Supabase, and bundles the fonts. |
 | `capacitor.config.json` | App name, app id and notification icon settings. |
 | `android/` | The native Android shell (a WebView) that Capacitor generated. |
 | `.github/workflows/build-apk.yml` | GitHub builds the APK on every push and publishes it as the **latest** release. |
 
+## Data and privacy
+
+- Everything is saved on the phone first, so the app works without internet.
+- After signing in, changes sync to a private Supabase project: `user_state` (planner data), `journal_entries`,
+  `memories` and the private `memories` storage bucket. Row-level security lets each person read and write only their own rows and files.
+
 ## Getting the app
 
-Open the repository's **Releases → latest** page on your phone and download the `.apk`.
-The first time, Android asks you to allow installing apps from your browser or Files app.
-
+Open **Releases → latest** on your Android phone and download the `.apk`.
 New versions install over the old one with the same signing key, so your data is kept.
-
-## Reminders
-
-Reminders are scheduled on the phone itself (no server):
-
-- Morning briefing
-- Morning and night routine, repeating every 30 minutes up to 3 times, stopping once everything is ticked
-- Song practice, evening wrap, and 15 minutes before each timed plan
-
-Times are set in the app under Settings → Reminders.
