@@ -1,0 +1,9 @@
+{
+  "appId": "my.harian.app",
+  "appName": "Harian",
+  "webDir": "www",
+  "android": { "backgroundColor": "#FBEAF2" },
+  "plugins": {
+    "LocalNotifications": { "smallIcon": "ic_stat_harian", "iconColor": "#C2307A" }
+  }
+}
